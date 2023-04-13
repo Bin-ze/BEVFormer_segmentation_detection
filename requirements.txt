@@ -1,0 +1,3 @@
+torchmetrics==0.3.2
+prettytable
+ shapely==1.8.5
