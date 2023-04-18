@@ -4,6 +4,8 @@
 ![](./figs/000868a72138448191b4092f75ed7776.jpg)
 ![](./figs/0141260a339d4b37addb55818bbae718.jpg)
 
+https://user-images.githubusercontent.com/72087870/232678436-b0b51b1b-fe09-4ed1-aadd-be2589360276.mp4
+
 
 # Abstract
 In this work, the authors present a new framework termed BEVFormer, which learns unified BEV representations with spatiotemporal transformers to support multiple autonomous driving perception tasks. In a nutshell, BEVFormer exploits both spatial and temporal information by interacting with spatial and temporal space through predefined grid-shaped BEV queries. To aggregate spatial information, the authors design a spatial cross-attention that each BEV query extracts the spatial features from the regions of interest across camera views. For temporal information, the authors propose a temporal self-attention to recurrently fuse the history BEV information.
