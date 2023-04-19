@@ -1,5 +1,6 @@
 # BEVFormer: a Cutting-edge Baseline for Camera-based Detection
-注：本代码库在BEVFormer算法所提供的代码的基础上新增了BEV分割代码
+
+注：本代码库在BEVFormer算法所提供的代码的基础上新增了BEV分割代码(Note: This code library adds BEV segmentation code based on the code provided by the BEVFormer algorithm)
 
 ![](./figs/000868a72138448191b4092f75ed7776.jpg)
 ![](./figs/0141260a339d4b37addb55818bbae718.jpg)
@@ -42,15 +43,15 @@ The proposed approach achieves the new state-of-the-art **56.9\%** in terms of N
 - [x] multi-task visualization
 - [x] weight  
 
-# 改进
-**map分支：仅训练分割分支，目前只支持单卡训练**
+# 改进(Improve)
+**map分支：仅训练分割分支，目前只支持单卡训练**(map branch: only training split branch, currently only supports single card training)
 
 | model              | Epoch | Divider | pred Crossing | Boundary | mIoU       |
 |--------------------| ----- | ------- | ------------- | -------- |------------|
 | [BEVFomer-small](projects/configs/bevformer/bevformer_small_seg.py) | 5     | 0.4684  | 0.3328        | 0.4775   | **0.4262** |
 
 
-**双分支：实现了检测与分割的联合训练，并支持并行**
+**双分支：实现了检测与分割的联合训练，并支持并行**(Double branch: realize the joint training of detection and segmentation, and support parallelism)
 
 det：
 
@@ -70,9 +71,8 @@ seg：
 |  [BEVFomer-base-150x150](projects/configs/bevformer/bevformer_base_seg_det_150x150.py)  | 23    | **0.4881** | **0.3392**    | **0.4955** | **0.4409** |
 
 
-# 模型权重
-如有需要，可联系：binze.zero@gmail.com
+# 模型权重(model weight)
+如有需要，可联系：binze.zero@gmail.com(If necessary, please contact: binze.zero@gmail.com)
 
 # Acknowledgement
-本项目参考了BEVerse, open-mmlab, BEVDet, HDMapNet等代码库，在这里表示感谢！
-
+本项目参考了BEVerse, open-mmlab, BEVDet, HDMapNet等代码库，在这里表示感谢！(This project refers to code libraries such as BEVerse, open-mmlab, BEVDet, HDMapNet, etc. Thank you here!)
