@@ -46,33 +46,29 @@ The proposed approach achieves the new state-of-the-art **56.9\%** in terms of N
 # 改进(Improve)
 **map分支：仅训练分割分支，目前只支持单卡训练**(map branch: only training split branch, currently only supports single card training)
 
-| model              | Epoch | Divider | pred Crossing | Boundary | mIoU       |
-|--------------------| ----- | ------- | ------------- | -------- |------------|
-| [BEVFomer-small](projects/configs/bevformer/bevformer_small_seg.py) | 5     | 0.4684  | 0.3328        | 0.4775   | **0.4262** |
+| model              | Epoch | Divider | pred Crossing | Boundary | mIoU       |     weight |
+|--------------------| ----- | ------- | ------------- | -------- |------------|------------|
+| [BEVFomer-small](projects/configs/bevformer/bevformer_small_seg.py) | 5     | 0.4684  | 0.3328        | 0.4775   | **0.4262** |[model](https://drive.google.com/file/d/1lfoBdfyiHPnHSI0pT_ptorUlqD-0xUM4/view?usp=sharing)|
 
 
 **双分支：实现了检测与分割的联合训练，并支持并行**(Double branch: realize the joint training of detection and segmentation, and support parallelism)
 
 det：
 
-|                                          model                                          | Epoch | mAP                    | NDS                     |
-|:---------------------------------------------------------------------------------------:| ----- | ---------------------- |-------------------------|
-|     [BEVFomer-small-150x150](projects/configs/bevformer/bevformer_small_seg_det.py)     | 19    | 0.3820 | 0.4869           |
-| [BEVFomer-small-300x300](projects/configs/bevformer/bevformer_small_seg_det_300x300.py) | 18    | 0.391  | 0.5031           |
-|  [BEVFomer-base-150x150](projects/configs/bevformer/bevformer_base_seg_det_150x150.py)  | 23    | 0.4186| 0.5132|
+|                                          model                                          | Epoch | mAP                    | NDS                     | weight |
+|:---------------------------------------------------------------------------------------:| ----- | ---------------------- |-------------------------|-------------------------|
+|     [BEVFomer-small-150x150](projects/configs/bevformer/bevformer_small_seg_det.py)     | 19    | 0.3820 | 0.4869           |[model](https://drive.google.com/file/d/1a42LRJhI9FoIeOORTwEf0N2Vtu98wP9O/view?usp=share_link)|
+| [BEVFomer-small-300x300](projects/configs/bevformer/bevformer_small_seg_det_300x300.py) | 18    | 0.391  | 0.5031           |[model](https://drive.google.com/file/d/1qH2BjN7yfuBnMe3oLNLsQ-CktrBkkLc6/view?usp=share_link)|
+|  [BEVFomer-base-150x150](projects/configs/bevformer/bevformer_base_seg_det_150x150.py)  | 23    | 0.4186| 0.5132            |[model](https://drive.google.com/file/d/1UM9Ifduu-IMF7qAW9nUlwXiXPZ17RkqQ/view?usp=share_link)|
 
 
 seg：
 
-| model                      | Epoch | Divider    | pred Crossing | Boundary   | mIoU       |
-| -------------------------- | ----- | ---------- | ------------- | ---------- | ---------- |
-|   [BEVFomer-small-150x150](projects/configs/bevformer/bevformer_small_seg_det.py)  | 19    | 0.4531     | 0.3105        | 0.469      | 0.4109     |
-| [BEVFomer-small-300x300](projects/configs/bevformer/bevformer_small_seg_det_300x300.py) | 18    | 0.4329     | 0.322         | 0.4845     | 0.4132     |
-|  [BEVFomer-base-150x150](projects/configs/bevformer/bevformer_base_seg_det_150x150.py)  | 23    | **0.4881** | **0.3392**    | **0.4955** | **0.4409** |
-
-
-# 模型权重(model weight)
-如有需要，可联系：binze.zero@gmail.com(If necessary, please contact: binze.zero@gmail.com)
+| model                      | Epoch | Divider    | pred Crossing | Boundary   | mIoU       |weight |
+| -------------------------- | ----- | ---------- | ------------- | ---------- | ---------- |---------- |
+|   [BEVFomer-small-150x150](projects/configs/bevformer/bevformer_small_seg_det.py)  | 19    | 0.4531     | 0.3105        | 0.469      | 0.4109     |[model](https://drive.google.com/file/d/1a42LRJhI9FoIeOORTwEf0N2Vtu98wP9O/view?usp=share_link)|
+| [BEVFomer-small-300x300](projects/configs/bevformer/bevformer_small_seg_det_300x300.py) | 18    | 0.4329     | 0.322         | 0.4845     | 0.4132     |[model](https://drive.google.com/file/d/1qH2BjN7yfuBnMe3oLNLsQ-CktrBkkLc6/view?usp=share_link)|
+|  [BEVFomer-base-150x150](projects/configs/bevformer/bevformer_base_seg_det_150x150.py)  | 23    | **0.4881** | **0.3392**    | **0.4955** | **0.4409** |[model](https://drive.google.com/file/d/1UM9Ifduu-IMF7qAW9nUlwXiXPZ17RkqQ/view?usp=share_link)|
 
 # Acknowledgement
 本项目参考了BEVerse, open-mmlab, BEVDet, HDMapNet等代码库，在这里表示感谢！(This project refers to code libraries such as BEVerse, open-mmlab, BEVDet, HDMapNet, etc. Thank you here!)
